@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-)5cl@k5dt7*e8)%1i(6m&8a-g5et7!#oer=gu1qh6^0t($qjy#")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", False)
+DEBUG = os.environ.get("DEBUG", True)
 
 ALLOWED_HOSTS = ['*']
 
@@ -159,7 +159,7 @@ MEDIA_ROOT = 'meeting/assets'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 STATIC_URL = 'static/'
-STATIC_ROOT = STATIC_ROOT= os.path.join(BASE_DIR,'static/')
+STATIC_ROOT = os.path.join(BASE_DIR,'static/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

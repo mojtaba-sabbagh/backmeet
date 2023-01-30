@@ -4,14 +4,14 @@ WORKDIR /app
 
 RUN pip install --upgrade pip
 
-COPY . .
-RUN pip install -r requirments.txt
-RUN pip install gunicorn
+#COPY . .
 RUN apt update
 RUN apt install -y git
-
-COPY entrypoint.sh .
+RUN git clone https://github.com/mojtaba-sabbagh/backmeet.git .
+RUN git switch master
+RUN pip install -r requirments.txt
+RUN pip install gunicorn
 
 EXPOSE 8000
 
-ENTRYPOINT ["sh","entrypoint.sh"]
+ENTRYPOINT ["bash","entrypoint.sh"]
