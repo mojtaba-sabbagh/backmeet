@@ -47,8 +47,8 @@ CORS_ALLOW_HEADERS = list(default_headers) + ['Set-Cookie', 'x-xsrf-token', 'Con
 USE_X_FORWARDED_HOST = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CORS_ALLOWED_ORIGINS = ['http://127.0.0.1:5173','http://localhost:5173', 'https://res.vru.ac.ir']
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:5173', 'http://localhost:5173', 'https://res.vru.ac.ir']
+CORS_ALLOWED_ORIGINS = ['http://127.0.0.1:5173','http://localhost:5173', 'https://res.vru.ac.ir:8001']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:5173', 'http://localhost:5173', 'https://res.vru.ac.ir:8001']
 
 SESSION_COOKIE_HTTPONLY = False
 APPEND_SLASH = False
