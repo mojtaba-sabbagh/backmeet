@@ -39,16 +39,16 @@ SESSION_COOKIE_SAMESITE = 'None'
 
 from corsheaders.defaults import default_headers
 CORS_ALLOW_ALL_ORIGINS=  False
-#CORS_ALLOW_ALL_ORIGINS=  True
 CORS_ALLOW_CREDENTIALS = True
 
 #making sure CORS_ALLOW_HEADERS  is not "*"
 from corsheaders.defaults import default_headers
 CORS_ALLOW_HEADERS = list(default_headers) + ['Set-Cookie', 'x-xsrf-token', 'Content-Type', 'Content-Disposition']
-#CORS_ALLOW_HEADERS = ["*"]
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CORS_ALLOWED_ORIGINS = ['http://127.0.0.1:5173','http://localhost:5173']
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:5173', 'http://localhost:5173']
+CORS_ALLOWED_ORIGINS = ['http://127.0.0.1:5173','http://localhost:5173', 'https://res.vru.ac.ir']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:5173', 'http://localhost:5173', 'https://res.vru.ac.ir']
 
 SESSION_COOKIE_HTTPONLY = False
 APPEND_SLASH = False
